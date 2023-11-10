@@ -1,2 +1,2 @@
 # TROUBLER
-A CALL AND SMS BOMBING PROGRAM
+A simple program to generate password
