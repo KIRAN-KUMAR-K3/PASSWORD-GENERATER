@@ -7,6 +7,13 @@ def generate_password(length):
     return password
 
 if __name__ == "__main__":
-    password_length = int(input("Enter the desired password length: "))
-    generated_password = generate_password(password_length)
-    print("Generated Password:", generated_password)
+    try:
+        password_length = int(input("Enter the desired password length: "))
+        if password_length <= 0:
+            raise ValueError("Password length must be a positive integer.")
+        
+        generated_password = generate_password(password_length)
+        print("Generated Password:", generated_password)
+    except ValueError as e:
+        print(f"Error: {e}")
+
